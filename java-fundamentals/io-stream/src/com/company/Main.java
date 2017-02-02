@@ -76,11 +76,11 @@ public class Main {
         try (Reader inFile = new FileReader("input.txt")) {
 
             int length;
-            char[] byteBuff = new char[10];
-            while ((length = inFile.read(byteBuff)) >= 0) {
+            char[] charBuff = new char[10];
+            while ((length = inFile.read(charBuff)) >= 0) {
 
                 for (int i = 0; i < length; i++) {
-                    char byteVal = byteBuff[i];
+                    char byteVal = charBuff[i];
                     System.out.println("Char value: " + byteVal);
                 }
 
