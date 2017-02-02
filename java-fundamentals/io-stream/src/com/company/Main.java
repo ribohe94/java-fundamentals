@@ -1,16 +1,14 @@
 package com.company;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
 public class Main {
 
     public static void main(String[] args) {
         /**
-         * Reading an array of bytes
+         * Reading bytes 1 by 1
          */
+        System.out.println("**********  Reading bytes 1 by 1  **********\n\n");
 
         try (InputStream inFile = new FileInputStream("input.txt")) {
 
@@ -20,6 +18,24 @@ public class Main {
                 System.out.println("Byte value: " + byteVal);
             }
 
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        /**
+         * Reading chars 1 by 1
+         */
+
+        System.out.println("**********  Reading chars 1 by 1  **********\n\n");
+
+        int intVal;
+        try (Reader reader = new FileReader("input.txt")) {
+            while ((intVal = reader.read()) >= 0) {
+                char byteVal = (char) intVal;
+                System.out.println("Char value: " + byteVal);
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
