@@ -76,5 +76,6 @@ public class Main {
 //        doTryWithResources();
 //        doTryWithResourcesMulti();
         doCloseThing();
+
     }
 }
