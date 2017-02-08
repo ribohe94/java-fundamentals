@@ -22,7 +22,7 @@ public class Main {
         };
 
 	    try(FileSystem zipFs = openZip(Paths.get("myData.zip"))) {
-	        
+
 
         } catch (Exception e) {
 	        System.out.println(e.getClass().getSimpleName() + " - " + e.getMessage());
