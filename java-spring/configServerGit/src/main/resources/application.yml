@@ -1,0 +1,19 @@
+---
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ribohe94/spring-cloudconfig-tolls.git
+          search-paths:
+            - 'station*'
+          repos:
+            perf:
+              pattern:
+                - "*/perf"
+              uri: https://github.com/ribohe94/spring-cloudconfig-tolls-perf.git
+              search-paths:
+                - 'station*'
+                
