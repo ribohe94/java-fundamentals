@@ -1,10 +1,18 @@
 ---
 server:
   port: 8888
+security:
+  basic:
+    enabled: true
+  user:
+    name: bove
+    password: pw
 spring:
   cloud:
     config:
       server:
+        encrypt:
+          enabled: false
         git:
           uri: https://github.com/ribohe94/spring-cloudconfig-tolls.git
           search-paths:
@@ -16,4 +24,3 @@ spring:
               uri: https://github.com/ribohe94/spring-cloudconfig-tolls-perf.git
               search-paths:
                 - 'station*'
-                
